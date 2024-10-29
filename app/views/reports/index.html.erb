@@ -7,6 +7,7 @@
             <th>Tipo</th>
             <th>Fecha</th>
             <th>Hora de Reporte</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
             <td><%= report.issue_type %></td>
             <td><%= report.created_at.strftime("%Y-%m-%d") %></td>
             <td><%= report.created_at.strftime("%H:%M") %></td>
+            <td>Editar / Eliminar</td>
         </tr>
         <% end %>
     </tbody>
