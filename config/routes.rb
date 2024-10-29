@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  #Peticion para obtener la pagina de Reportes 
+  get '/reports', to: 'reports#index'
+
 end

@@ -1,0 +1,22 @@
+<h1> Reportes: </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Estado</th>
+            <th>Tipo</th>
+            <th>Fecha</th>
+            <th>Hora de Reporte</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @reports.each do |report| %>
+        <tr>
+            <td><%= report.status %></td>
+            <td><%= report.issue_type %></td>
+            <td><%= report.created_at.strftime("%Y-%m-%d") %></td>
+            <td><%= report.created_at.strftime("%H:%M") %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
