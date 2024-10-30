@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Define the root path route ("/")
-  root 'reports#index' ¿
+  root 'reports#index' 
 
   # Peticiones para obtener la página de Reportes
   get '/reports', to: 'reports#index'
