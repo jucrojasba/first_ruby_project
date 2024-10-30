@@ -15,4 +15,12 @@ Rails.application.routes.draw do
   #Peticion para obtener la pagina de Reportes 
   get '/reports', to: 'reports#index'
 
+  #Peticion para crear un nuevo registro en la pagina de reportes
+  post '/reports', to: 'reports#create'
+
+  #Peticion para eliminar un reporte
+  delete '/reports/:id', to: 'reports#destroy', as: 'delete_report'
+
+  #Peticion para PATCH actualizar el estado de un registro
+  patch '/reports/:id', to: 'reports#update', as: 'update_report'
 end

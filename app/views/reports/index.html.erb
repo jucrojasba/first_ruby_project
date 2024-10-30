@@ -1,24 +1,45 @@
-<h1> Reportes: </h1>
+<h1>Reportes:</h1>
+
+<div>
+  <%= form_with model: @report, url: reports_path do |form| %>
+    <%= form.hidden_field :status, value: 1 %> 
+    <%= form.hidden_field :issue_type, value: 1 %> <!-- '1' para falta de café -->
+    <%= form.submit 'Reportar falta de café', class: 'btn btn-danger' %>
+  <% end %>
+</div>
+
+<div>
+  <%= form_with model: @report, url: reports_path do |form| %>
+    <%= form.hidden_field :status, value: 1 %> 
+    <%= form.hidden_field :issue_type, value: 2 %> <!-- '2' para falta de papel higiénico -->
+    <%= form.submit 'Reportar falta de papel higiénico', class: 'btn btn-danger' %>
+  <% end %>
+</div>
 
 <table>
-    <thead>
-        <tr>
-            <th>Estado</th>
-            <th>Tipo</th>
-            <th>Fecha</th>
-            <th>Hora de Reporte</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @reports.each do |report| %>
-        <tr>
-            <td><%= report.status %></td>
-            <td><%= report.issue_type %></td>
-            <td><%= report.created_at.strftime("%Y-%m-%d") %></td>
-            <td><%= report.created_at.strftime("%H:%M") %></td>
-            <td>Editar / Eliminar</td>
-        </tr>
-        <% end %>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Estado</th>
+      <th>Tipo</th>
+      <th>Fecha</th>
+      <th>Hora de Reporte</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reports.each do |report| %>
+      <tr>
+        <td><%= report.status == 1 ? 'Nueva' : 'Resuelta' %></td>
+        <td><%= report.issue_type == 1 ? 'Falta café' : 'Falta papel higiénico' %></td>
+        <td><%= report.created_at.strftime("%Y-%m-%d") %></td>
+        <td><%= report.created_at.strftime("%H:%M") %></td>
+        <td>
+          <% if report.status == 1 %> <!-- Mostrar el enlace solo si el estado es 1 -->
+            <%= link_to 'Marcar como Resuelto', update_report_path(report), data: { turbo_method: :patch, confirm: '¿Estás seguro de que deseas marcar este reporte como resuelto?' }, class: 'btn btn-success' %>
+          <% end %>
+          <%= link_to 'Eliminar', delete_report_path(report), data: { turbo_method: :delete, confirm: '¿Estás seguro de que deseas eliminar este reporte?' }, class: 'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
