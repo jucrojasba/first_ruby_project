@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class ReportsControllerTest <ActionDispactch:IntegrationTest
+class ReportsControllerTest < ActionDispatch::IntegrationTest
     test 'render a list of reports' do
-        get reports_path 
+        get '/reports' 
 
         assert_response :success
     end
