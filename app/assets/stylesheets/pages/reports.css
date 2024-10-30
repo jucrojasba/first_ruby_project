@@ -1,0 +1,78 @@
+.reportes-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.report-form {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.reports-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.reports-table th, .reports-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.reports-table th {
+    background-color: #f2f2f2;
+}
+
+.reports-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.actions-cell {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px; 
+    align-items: flex-start; 
+}
+
+@media (min-width: 576px) {
+    .actions-cell {
+        flex-direction: row; 
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 575px) {
+    .btn {
+        width: 60%;
+        font-size: 0.9em;
+    }
+}
