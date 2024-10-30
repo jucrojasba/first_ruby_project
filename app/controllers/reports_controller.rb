@@ -1,7 +1,7 @@
 class ReportsController < ApplicationController
     def index
       @reports = Report.order(created_at: :desc)
-      @report = Report.new # Inicializamos un nuevo reporte para el formulario
+      @report = Report.new
     end
   
     def create
@@ -9,7 +9,7 @@ class ReportsController < ApplicationController
       if @report.save
         redirect_to reports_path, notice: 'Reporte creado exitosamente.'
       else
-        render :index # Si hay un error, regresamos a la vista index
+        render :index
       end
     end
     
@@ -21,7 +21,7 @@ class ReportsController < ApplicationController
 
     def update
         @report = Report.find(params[:id])
-        if @report.update(status: 2) # Cambia el estado a 2 (Resuelta)
+        if @report.update(status: 2) 
           redirect_to reports_path, notice: 'Reporte marcado como resuelto.'
         else
           redirect_to reports_path, alert: 'No se pudo actualizar el reporte.'
