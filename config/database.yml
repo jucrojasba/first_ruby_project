@@ -15,7 +15,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: verceldb
+  database: first_ruby_project_development
   host: ep-blue-glitter-a4x4xns1-pooler.us-east-1.aws.neon.tech
   user: default
   password: S7Zy1HFKYLOe
