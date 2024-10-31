@@ -4,7 +4,7 @@ Este README documenta los pasos necesarios para configurar y ejecutar la aplicac
 
 ## 1. Versión de Ruby
 
-Asegúrate de tener Ruby instalado en tu sistema. Este proyecto fue desarrollado con Ruby versión X.X.X. (reemplaza con tu versión).
+Asegúrate de tener Ruby instalado en tu sistema. Este proyecto fue desarrollado con Ruby versión 3.3.0 (reemplaza con tu versión).
 
 ## 2. Dependencias del Sistema
 
