@@ -27,8 +27,6 @@ default: &default
 
 development:
   <<: *default
-  database: first_ruby_project_development
-
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
@@ -61,7 +59,6 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: first_ruby_project_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,4 +82,4 @@ test:
 #
 production:
   <<: *default
-  database: first_ruby_project_production
+
