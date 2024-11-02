@@ -54,6 +54,7 @@ Para desplegar la aplicación, sigue las instrucciones específicas de tu provee
 
 ## Estructura de carpetas
 
+```plaintext
 project_root/
 ├── app/
 │   ├── controllers/       # Controladores de la aplicación
@@ -72,6 +73,7 @@ project_root/
 ├── test/                  # Pruebas de la aplicación
 ├── tmp/                   # Archivos temporales
 └── vendor/                # Gemas de terceros no gestionadas por Bundler
+```
 
 
 
