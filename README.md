@@ -55,7 +55,7 @@ Para desplegar la aplicación, sigue las instrucciones específicas de tu provee
 ## Estructura de carpetas
 
 ```plaintext
-project_root/
+first_ruby_project/
 ├── app/
 │   ├── controllers/       # Controladores de la aplicación
 │   ├── models/            # Modelos de la aplicación
